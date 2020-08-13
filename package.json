@@ -1,0 +1,49 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "apidoc": {
+    "title": "Water My Plants API Documentation",
+    "url": "https://wmp-be.herokuapp.com/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "docs": "apidoc -i ./api/routes -e node_modules -o ./docs",
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianna-keune-archived-lambda/back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianna-keune-archived-lambda/back-end/issues"
+  },
+  "homepage": "https://github.com/brianna-keune-archived-lambda/back-end#readme",
+  "dependencies": {
+    "@okta/okta-sdk-nodejs": "^4.1.0",
+    "apidoc": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
+    "knex": "^0.21.4",
+    "knex-cleaner": "^1.3.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.0",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "jest": "^26.4.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
